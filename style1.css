@@ -641,6 +641,28 @@ p {
   line-height: 1.7;
 }
 
+.project-code-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.project-code-links a {
+  color: var(--teal-dark);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-code-links a:hover {
+  text-decoration: underline;
+}
+
+.project-code-links a span {
+  color: var(--teal);
+}
+
 .round-link {
   width: 38px;
   height: 38px;

@@ -692,6 +692,13 @@ p {
   font-size: 15px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 .footer {
   min-height: 86px;
   display: flex;

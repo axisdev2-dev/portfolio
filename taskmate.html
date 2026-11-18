@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f2">
+  <title>TaskMate — Your day, in hand</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="TaskMate home">
+        <span class="brand-icon">✓</span>
+        taskmate<span class="period">.</span>
+      </a>
+      <span class="local-note"><span></span> Saved on this device</span>
+    </header>
+
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL SPACE</p>
+      <h1>Make room for<br><em>what matters.</em></h1>
+      <p class="welcome-copy">A little progress, one task at a time.</p>
+    </section>
+
+    <section class="task-panel" aria-label="Task manager">
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">What needs doing?</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          maxlength="120"
+          placeholder="What needs doing?"
+          autocomplete="off"
+          required
+        >
+
+        <label class="sr-only" for="due-date">Optional due date</label>
+        <input
+          id="due-date"
+          name="dueDate"
+          type="date"
+          aria-label="Optional due date"
+        >
+
+        <button class="add-button" type="submit" aria-label="Add task">＋</button>
+      </form>
+
+      <div class="list-head">
+        <div>
+          <h2>Your tasks <span id="total-count">0</span></h2>
+          <p id="status-text">Start small. You’ve got this.</p>
+        </div>
+        <button id="clear-done" class="clear-button" type="button">
+          Clear completed
+        </button>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter tasks">
+        <button
+          type="button"
+          class="filter active"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          All <span id="all-count">0</span>
+        </button>
+        <button
+          type="button"
+          class="filter"
+          data-filter="active"
+          aria-pressed="false"
+        >
+          To do <span id="active-count">0</span>
+        </button>
+        <button
+          type="button"
+          class="filter"
+          data-filter="completed"
+          aria-pressed="false"
+        >
+          Done <span id="done-count">0</span>
+        </button>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <div id="empty-state" class="empty-state">
+        <span class="empty-icon">✳</span>
+        <strong>Nothing on your list yet</strong>
+        <span>Add a task above and take it from there.</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>One thing at a time.</span>
+      <span>Built with care by <strong>Oluwasegun</strong></span>
+    </footer>
+  </main>
+</body>
+</html>
